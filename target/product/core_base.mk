@@ -20,6 +20,16 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.notification_sound=OnTheHunt.ogg \
     ro.config.alarm_alert=Alarm_Classic.ogg
 
+# SU Support
+SUPERUSER_EMBEDDED := true
+
+PRODUCT_PACKAGES := \
+    Superuser \
+    su
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=3
+
 PRODUCT_PACKAGES += \
     ContactsProvider \
     DefaultContainerService \
